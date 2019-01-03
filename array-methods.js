@@ -53,4 +53,12 @@ const ePlanets = planets.filter(planet => {
 //********************************** PART 4 - REDUCE **********************************/
 
 // Use the reduce method to create a sentence from the words in the following array
+const reduceEl = document.getElementById("reduce")
+reduceEl.innerHTML = "<h2>Sentence:</h2>"
+
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+
+const sentence = words.reduce((now, next) => {
+    let structure = now += ` ${next}`
+    reduceEl.innerHTML += structure
+    })
