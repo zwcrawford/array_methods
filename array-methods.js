@@ -1,4 +1,6 @@
 const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
+
+
 //****************** PART 1 - FOREACH ******************/
 /*
     Use the forEach method to add the name of each planet
@@ -12,6 +14,7 @@ planets.forEach(planet => {
   // Set the content of a section with an id of planets to the following (after the heading)
   planetEl.innerHTML += `${planet} `
 });
+
 
 //****************** PART 2 - MAP ******************/
 /*
@@ -30,6 +33,7 @@ const upperRocks = planets.map(function (planet) {
     // planet.slice allows you to stop the capitalization after the first letter.
     mapEl.innerHTML += `${planet.charAt(0).toUpperCase()}${planet.slice(1)} `
 })
+
 
 //****************** PART 3 - FILTER ******************/
 /*
