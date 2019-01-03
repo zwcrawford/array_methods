@@ -59,5 +59,5 @@ reduceEl.innerHTML = "<h2>Sentence:</h2>"
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
 
 const sentence = words.reduce((now, next) => now +` ${next}`);
-    reduceEl.innerHTML += `${sentence}.`
+    reduceEl.innerHTML += `${sentence}`
     
