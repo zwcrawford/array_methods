@@ -1,7 +1,6 @@
 const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
 
-
-//****************** PART 1 - FOREACH ******************/
+//********************************** PART 1 - FOREACH **********************************/
 /*
     Use the forEach method to add the name of each planet
     to a section element in your HTML with an id of "planets".
@@ -15,8 +14,7 @@ planets.forEach(planet => {
   planetEl.innerHTML += `${planet} `
 });
 
-
-//****************** PART 2 - MAP ******************/
+//************************************ PART 2 - MAP ************************************/
 /*
     Use the map method to create a new array where the
     first letter of each planet is capitalized. Use the
@@ -35,7 +33,7 @@ const upperRocks = planets.map(function (planet) {
 })
 
 
-//****************** PART 3 - FILTER ******************/
+//********************************** PART 3 - FILTER **********************************/
 /*
     Use the filter method to create a new array that
     contains planets with the letter 'e'. Use the `includes()`
@@ -43,7 +41,16 @@ const upperRocks = planets.map(function (planet) {
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
+const easyEl = document.getElementById("easy")
+easyEl.innerHTML = "<h2>List of planets with the letter 'e':</h2>"
 
-//****************** PART 4 - REDUCE ******************/
+const ePlanets = planets.filter(planet => {
+    if (planet.indexOf('e') > -1)
+    easyEl.innerHTML += `${planet.charAt(0).toUpperCase()}${planet.slice(1)} `
+})
+
+
+//********************************** PART 4 - REDUCE **********************************/
+
 // Use the reduce method to create a sentence from the words in the following array
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
